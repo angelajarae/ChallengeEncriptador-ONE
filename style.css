@@ -40,9 +40,6 @@ body{
 .input-area::placeholder{
     color: var(--dark-blue);
 }
-.input-area:focus{
-    border: none;
-}
 .text-condition{
     color: var(--gray);
     flex: 2.5;

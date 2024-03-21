@@ -35,10 +35,26 @@ function encriptar(texto){
 }
 
 
+
+
 function onDesencriptar(){
     divOutputInical.style.display="none";
     divOutputFinal.style.display="flex";
+
+    outputArea.innerHTML=desencriptar(inputArea.value);
 }
+function desencriptar(texto){
+    texto=texto.toLowerCase();
+
+    for(let i=0;i<matrizDiccionario.length;i++){
+        if(texto.includes(matrizDiccionario[i][1])){
+            texto=texto.replaceAll(matrizDiccionario[i][1],matrizDiccionario[i][0]);
+        }
+    }
+
+    return texto;
+}
+
 
 
 function onCopiar(){
@@ -46,7 +62,7 @@ function onCopiar(){
         if (result.state === "granted" || result.state === "prompt") {
             navigator.clipboard.writeText(outputArea.innerHTML).then(
                 () => {
-                    
+
                 },
                 () => {
                     alert("Error al copiar al portapapeles.");
