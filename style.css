@@ -1,0 +1,139 @@
+body{
+    background-color: var(--light-blue);
+}
+.contenedor{
+    height: 100%;
+    padding: 2.5% 8%;
+}
+
+
+.logo{
+    position: absolute;
+    left: 7%;
+}
+
+
+
+.contenedor-contenido{
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+
+.contenedor-input{
+    flex: 2;
+    margin: 7% 2% 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-area{
+    width: 100%;
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: none;
+    font-size: 32px;
+    flex: 16;
+    resize: none;
+}
+.input-area::placeholder{
+    color: var(--dark-blue);
+}
+.input-area:focus{
+    border: none;
+}
+.text-condition{
+    color: var(--gray);
+    flex: 2.5;
+    display: flex;
+    align-items: center;
+}
+.contenedor-botones{
+    display: flex;
+    justify-content: space-around;
+    flex: 1.2;
+    padding: 0 4%;
+}
+.contenedor-botones button{
+    padding: 0 8%;
+    border: 1px solid var(--dark-blue);
+    border-radius: 15px;
+}
+.boton-encriptar{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    cursor: pointer;
+}
+.boton-encriptar:hover{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+.boton-desencriptar{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+.boton-desencriptar:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+
+
+
+
+.contenedor-output{
+    flex: 1;
+    margin: 0 2%;
+    height: 100%;
+}
+.contenido-output{
+    background-color: var(--white);
+    border-radius: 20px;
+    height: 100%;
+    padding: 5% 8%;
+    
+}
+
+
+.output-inicial{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.imagen-output{
+    flex: 0.6;
+    margin-top: 10%;
+}
+.text-noMensaje{
+    font-size: 24px;
+    font-weight: bold;
+    flex: 0.1;
+    text-align: center;
+}
+.text-ingresarTexto{
+    font-size: 16px;
+    flex: 0.3;
+    
+}
+
+
+.output-final{
+    display:none;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+.output-area{
+    font-size: 24px;
+}
+.boton-copiar{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    cursor: pointer;
+    padding: 2% 8%;
+    border: 1px solid var(--dark-blue);
+    border-radius: 15px;
+    align-self: center;
+}
