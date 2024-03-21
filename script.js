@@ -42,5 +42,19 @@ function onDesencriptar(){
 
 
 function onCopiar(){
-    
+    navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+        if (result.state === "granted" || result.state === "prompt") {
+            navigator.clipboard.writeText(outputArea.innerHTML).then(
+                () => {
+                    
+                },
+                () => {
+                    alert("Error al copiar al portapapeles.");
+                },
+            );
+        }
+        else{
+            alert("No se tienen los permisos para copiar al portapapeles.");
+        }
+    });
 }
