@@ -17,10 +17,17 @@ const outputArea=document.querySelector(".output-area");
 
 
 function onEncriptar(){
-    divOutputInical.style.display="none";
-    divOutputFinal.style.display="flex";
+    if(inputArea.value){
+        divOutputInical.style.display="none";
+        divOutputFinal.style.display="flex";
 
-    outputArea.innerHTML=encriptar(inputArea.value);
+        outputArea.innerHTML=encriptar(inputArea.value);
+    }
+    else{
+        divOutputInical.style.display="flex";
+        divOutputFinal.style.display="none";
+    }
+    
 }
 function encriptar(texto){
     texto=texto.toLowerCase();
@@ -38,10 +45,16 @@ function encriptar(texto){
 
 
 function onDesencriptar(){
-    divOutputInical.style.display="none";
-    divOutputFinal.style.display="flex";
+    if(inputArea.value){
+        divOutputInical.style.display="none";
+        divOutputFinal.style.display="flex";
 
-    outputArea.innerHTML=desencriptar(inputArea.value);
+        outputArea.innerHTML=desencriptar(inputArea.value);
+    }
+    else{
+        divOutputInical.style.display="flex";
+        divOutputFinal.style.display="none";
+    }
 }
 function desencriptar(texto){
     texto=texto.toLowerCase();
